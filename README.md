@@ -4,8 +4,30 @@ Updating models
 
 Test - Updating Models Branch
 
-## Models
+## Views
+The following tables contain RESTful routes for the current models. 
 
+### User
+---
+|  Route  |        URL        |  Verb  |    Desc     |
+|---------|-------------------|--------|-------------|
+| Index   | /users/           | GET    | All Users   |
+| Show    | /users/:id        | GET    | One User    |
+| Create  | /users/new        | POST   | New User    |
+| Destroy | /users/delete/:id | DELETE | Delete User |
+|         | /users/tasks/:d   | GET    | User Tasks   |
+
+
+
+
+
+### Project
+
+
+### Task
+
+
+## Models
 
 ### User
 
