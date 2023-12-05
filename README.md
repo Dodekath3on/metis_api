@@ -14,7 +14,6 @@ The following tables contain RESTful routes to interact with the backend api. Re
 | EDIT    | PATCH  | /user/:id       |
 | UPDATE  | PUT    | /user/:id       |
 | DESTROY | DELETE | /user/:id       |
-|         | GET    | /user/tasks/:id |
 
 ### Project
 ---
@@ -30,15 +29,15 @@ The following tables contain RESTful routes to interact with the backend api. Re
 
 ### Task
 ---
-|  NAME   |  VERB  |   PATH        |
-|---------|--------|---------------|
-| INDEX   | GET    | /task         |
-| SHOW    | GET    | /task/:id     |
-| CREATE  | POST   | /task         |
-| EDIT    | PATCH  | /task/:id     |
-| UPDATE  | PUT    | /task/:id     |
-| DESTROY | DELETE | /task/:id     |
-<!-- |         | GET    | /task/user    | -->
+|  NAME   |  VERB  |   PATH         |
+|---------|--------|----------------|
+| INDEX   | GET    | /task          |
+| SHOW    | GET    | /task/:id      |
+| CREATE  | POST   | /task          |
+| EDIT    | PATCH  | /task/:id      |
+| UPDATE  | PUT    | /task/:id      |
+| DESTROY | DELETE | /task/:id      |
+|         | GET    | /task/user/:id |
 <!-- |         | GET    | /task/project | -->
 
 ## Models
