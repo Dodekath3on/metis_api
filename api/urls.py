@@ -14,6 +14,8 @@ RESTful routes and the addition of later models.
 
 router = DefaultRouter()
 router.register(r'user', user.UserViewSet)
+router.register(r'project', project.ProjectViewSet)
+router.register(r'task', task.TaskViewSet)
 
 urlpatterns = [
   path('', include(router.urls))

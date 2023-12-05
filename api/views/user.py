@@ -10,8 +10,6 @@ class UserViewSet(viewsets.ModelViewSet):
   queryset = User.objects.all()
   serializer_class = UserSerializer
 
-
-
 '''
 @api_view(['GET']) # INDEX
 def getUsers(request):

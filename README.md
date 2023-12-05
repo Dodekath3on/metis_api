@@ -1,31 +1,45 @@
 README.md
 # Dodekath3on / metis_api
-Updating models
-
-Test - Updating Models Branch
 
 ## Views
-The following tables contain RESTful routes for the current models. 
+The following tables contain RESTful routes to interact with the backend api. Relational routes are currently being worked on. 
 
 ### User
 ---
-|  Route  |        URL        |  Verb  |    Desc     |
-|---------|-------------------|--------|-------------|
-| Index   | /users/           | GET    | All Users   |
-| Show    | /users/:id        | GET    | One User    |
-| Create  | /users/new        | POST   | New User    |
-| Destroy | /users/delete/:id | DELETE | Delete User |
-|         | /users/tasks/:d   | GET    | User Tasks   |
-
-
-
-
+|  NAME   |  VERB  |      PATH       |
+|---------|--------|-----------------|
+| INDEX   | GET    | /user           |
+| SHOW    | GET    | /user/:id       |
+| CREATE  | POST   | /user           |
+| EDIT    | PATCH  | /user/:id       |
+| UPDATE  | PUT    | /user/:id       |
+| DESTROY | DELETE | /user/:id       |
+<!-- |         | GET    | /user/tasks/:id | -->
 
 ### Project
-
+---
+|  NAME   |  VERB  |    PATH       |
+|---------|--------|---------------|
+| INDEX   | GET    | /project      |
+| SHOW    | GET    | /project/:id  |
+| CREATE  | POST   | /project      |
+| EDIT    | PATCH  | /project/:id  |
+| UPDATE  | PUT    | /project/:id  |
+| DESTROY | DELETE | /project/:id  |
+<!-- |         | GET    | /project/tasks| -->
 
 ### Task
-
+---
+|  NAME   |  VERB  |   PATH        |
+|---------|--------|---------------|
+| INDEX   | GET    | /task         |
+| SHOW    | GET    | /task/:id     |
+| CREATE  | POST   | /task         |
+| EDIT    | PATCH  | /task/:id     |
+| UPDATE  | PUT    | /task/:id     |
+| DESTROY | DELETE | /task/:id     |
+<!-- |         | GET    | /task/user    | -->
+<!-- |         | GET    | /task/project | -->
 
 ## Models
 
@@ -59,4 +73,3 @@ The following tables contain RESTful routes for the current models.
 
 - has_one User
 - has_one Project
-
