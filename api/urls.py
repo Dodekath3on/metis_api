@@ -18,7 +18,8 @@ router.register(r'project', project.ProjectViewSet)
 router.register(r'task', task.TaskViewSet)
 
 urlpatterns = [
-  path('', include(router.urls))
+  path('', include(router.urls)),
+  path('task/user/<int:user_id>', task.getUserTasks),
 ]
 
 '''

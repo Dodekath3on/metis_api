@@ -10,6 +10,8 @@ class UserViewSet(viewsets.ModelViewSet):
   queryset = User.objects.all()
   serializer_class = UserSerializer
 
+  
+
 '''
 @api_view(['GET']) # INDEX
 def getUsers(request):
@@ -21,12 +23,6 @@ def getUsers(request):
 def showUser(request, user_id):
   user = User.objects.filter(id=user_id)
   serializer = UserSerializer(user, many=True)
-  return Response(serializer.data)
-
-@api_view(['GET'])
-def getUserTasks(request, user_id):
-  user = User.objects.get(id=user_id)
-  serializer = TaskSerializer(user.task_set.all(), many=True)
   return Response(serializer.data)
 
 @api_view(['POST'])
