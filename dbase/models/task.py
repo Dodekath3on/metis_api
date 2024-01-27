@@ -16,5 +16,5 @@ class Task(models.Model):
   estimated_time = models.DurationField(default=timedelta(days=1))
   actual_time = models.DurationField(default=timedelta(days=1))
 
-  def __str__(self):
+  def __str__(self) -> str:
     return f"{self.name}"
