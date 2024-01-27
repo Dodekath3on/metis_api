@@ -24,7 +24,7 @@ class TeamSerializer(serializers.ModelSerializer):
     fields = '__all__'
 
 class ProjectSerializer(serializers.ModelSerializer):
-  team = TeamSerializer(many = True)
+  teams = TeamSerializer(many = True)
   class Meta:
     model = Project
     fields = '__all__'

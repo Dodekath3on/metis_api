@@ -8,6 +8,7 @@ class User(models.Model):
   email = models.EmailField(max_length=100, unique=True)
   project_set = models.ManyToManyField(Project, through='Task')
   teams = models.ManyToManyField(Team)
+  bill_rate = models.IntegerField(default=0.00)
 
   def __str__(self):
     return f"{self.username}"
