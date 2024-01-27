@@ -23,7 +23,7 @@ async function getUsers() {
   const users = await response.json()
   return users
 }
-// getItems().then(data=>console.log(data))
+getUsers().then(data=>console.log(data))
 
 /*-----------
 Get one User
@@ -94,7 +94,7 @@ async function updateUser() {
   const user = await response.json()
   return user
 }
-updateUser().then(data=>console.log(data))
+// updateUser().then(data=>console.log(data))
 
 /*-----------
 Delete User
