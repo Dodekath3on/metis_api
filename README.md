@@ -44,23 +44,22 @@ The following tables contain RESTful routes to interact with the backend api. Re
 
 ### User
 
-|  field    | type  |
-|-----------|-------|
-|  name     | char  |
-|  username | char  |
-|  email    | email |
-
-- access tasks with: 
-`user.task_set.all()`
+|  field       | type    |
+|--------------|---------|
+|  name        | char    |
+|  username    | char    |
+|  email       | email   |
+|  project_set | list    |
+|  teams       | list    |
+|  bill_rate   | decimal |
 
 ### Project
 
-|  field    | type |
-|-----------|------|
-|  name     | char |
-
-- access tasks with: 
-`project.task_set.all()`
+|  field    | type    |
+|-----------|---------|
+|  name     | char    |
+|  teams    | list    |
+|  budget   | decimal |
 
 ### Task
 
@@ -69,6 +68,3 @@ The following tables contain RESTful routes to interact with the backend api. Re
 |  name     | char |
 |  status   | char |
 |  priority | int  |
-
-- has_one User
-- has_one Project

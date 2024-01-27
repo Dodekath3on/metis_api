@@ -8,13 +8,17 @@ class User(models.Model):
   email = models.EmailField(max_length=100, unique=True)
   project_set = models.ManyToManyField(Project, through='Task')
   teams = models.ManyToManyField(Team)
-  bill_rate = models.IntegerField(default=0.00)
+  bill_rate = models.DecimalField(
+    max_digits=5,
+    decimal_places=2,
+    default=0.00,
+  )
 
-  def __str__(self):
+  def __str__(self) -> str:
     return f"{self.username}"
   
-  def projects(self):
+  def projects(self) -> list:
     return list(set(self.project_set.all()))
   
-  def tasks(self):
+  def tasks(self) -> list:
     return self.task_set.all()
